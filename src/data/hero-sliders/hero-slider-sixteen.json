@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Unlock the Best",
+    "subtitle": " In Every Meal with Ahuja Mart",
+    "image": "/assets/img/banner/banner52.jpg",
+     "url": "/exclusive-collection"
+ 
+  },
+  {
+    "id": 2,
+    "title": "From Farm to Fork ",
+    "subtitle": " We’ve Got Your Veggies Covered.",
+    "image": "/assets/img/banner/banner55.jpg",
+    "url": "/exclusive-collection"
+ 
+  },
+  {
+    "id": 3,
+    "title": " Grown with Love",
+    "subtitle": "Delivered with Care – Taste the Quality",
+    "image": "/assets/img/banner/banner53.jpg",
+    "url": "/exclusive-collection"
+ 
+  }
+
+]
+
+
