@@ -4,18 +4,20 @@ import { useSelector } from "react-redux";
 import { getProducts } from "../../helpers/product";
 import ProductGridSingle from "../../components/product/ProductGridSingle";
 
+
 const ProductGrid = ({
   spaceBottomClass,
   category,
   type,
-  limit
+  limit,
+
 }) => {
   const { products } = useSelector((state) => state.product);
   const currency = useSelector((state) => state.currency);
   const { cartItems } = useSelector((state) => state.cart);
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const { compareItems } = useSelector((state) => state.compare);
-  const prods = getProducts(products, category, type, limit)
+  const prods = getProducts(products, category, type, limit ,)
   
   return (
     <Fragment>

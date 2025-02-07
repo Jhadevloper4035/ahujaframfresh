@@ -20,53 +20,7 @@ const LanguageCurrencyChanger = ({ currency }) => {
 
   return (
     <div className="language-currency-wrap">
-      <div className="same-language-currency language-style">
-        <span>
-          {i18n.resolvedLanguage === "en"
-            ? "English"
-            : i18n.resolvedLanguage === "hn"
-            ? "French"
-            : i18n.resolvedLanguage === "de"
-            ? "Germany"
-            : ""}{" "}
-          <i className="fa fa-angle-down" />
-        </span>
-        <div className="lang-car-dropdown">
-          <ul>
-            <li>
-              <button value="en" onClick={e => changeLanguageTrigger(e)}>
-                English
-              </button>
-            </li>
-            <li>
-              <button value="fn" onClick={e => changeLanguageTrigger(e)}>
-                French
-              </button>
-            </li>
-            <li>
-              <button value="de" onClick={e => changeLanguageTrigger(e)}>
-                Germany
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="same-language-currency use-style">
-        <span>
-          {currency.currencyName} 
-          <i className="fa fa-angle-down" />
-        </span>
-        <div className="lang-car-dropdown">
-          <ul>
-            <li>
-              <button value="INR" onClick={e => setCurrencyTrigger(e)}>
-                INR
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="same-language-currency">
+      <div className="same-language-currency" style={ { padding : "15px 0px "}}>
         <p>Call Us : +91-8130692020</p>
       </div>
     </div>

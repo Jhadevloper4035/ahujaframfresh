@@ -5,7 +5,7 @@ import Logo from "../../components/header/Logo";
 import NavMenu from "../../components/header/NavMenu";
 import IconGroup from "../../components/header/IconGroup";
 import MobileMenu from "../../components/header/MobileMenu";
-import HeaderTop from "../../components/header/HeaderTop";
+// import HeaderTop from "../../components/header/HeaderTop";
 
 const HeaderOne = ({
   layout,
@@ -40,10 +40,7 @@ const HeaderOne = ({
           borderStyle === "fluid-border" && "border-none" 
         )}
       >
-        <div className={layout === "container-fluid" ? layout : "container"}>
-          {/* header top */}
-          <HeaderTop borderStyle={borderStyle} />
-        </div>
+
       </div>
 
       <div

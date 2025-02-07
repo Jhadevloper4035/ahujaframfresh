@@ -76,6 +76,8 @@ export const getProductCartQuantity = (cartItems, product, color, size) => {
         : true) &&
       (single.selectedProductSize ? single.selectedProductSize === size : true)
   );
+
+  
   if (cartItems.length >= 1 && productInCart) {
     if (product.variation) {
       return cartItems.find(
@@ -103,6 +105,7 @@ export const cartItemStock = (item, color, size) => {
 };
 
 //get products based on category
+
 export const getSortedProducts = (products, sortType, sortValue) => {
   if (products && sortType && sortValue) {
     if (sortType === "category") {

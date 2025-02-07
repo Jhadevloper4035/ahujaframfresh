@@ -9,6 +9,8 @@ import { addToCart } from "../../store/slices/cart-slice";
 import { addToWishlist } from "../../store/slices/wishlist-slice";
 import ProductQunatity from "./ProductQunatity";
 
+
+
 function ProductModal({
   product,
   currency,

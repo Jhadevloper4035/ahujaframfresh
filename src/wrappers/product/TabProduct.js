@@ -8,16 +8,13 @@ const TabProduct = ({
   spaceTopClass,
   spaceBottomClass,
   bgColorClass,
-  category
+  category,
 }) => {
   return (
-    <div
-      className={clsx("product-area",  bgColorClass)}
-    >
+    <div className={clsx("product-area", bgColorClass)}>
       <div className="container">
-       
         <Tab.Container defaultActiveKey="bestSeller">
-          <Nav   variant="pills"  className="product-tab-list  pb-30 text-center" >
+          <Nav variant="pills" className="product-tab-list  pb-30 text-center">
             {/* <Nav.Item>
               <Nav.Link eventKey="newArrival">
                 <h4>New Arrivals</h4>
@@ -34,6 +31,7 @@ const TabProduct = ({
               </Nav.Link>
             </Nav.Item> */}
           </Nav>
+
           <Tab.Content>
             <Tab.Pane eventKey="newArrival">
               <div className="row">
@@ -45,12 +43,13 @@ const TabProduct = ({
                 />
               </div>
             </Tab.Pane>
+
             <Tab.Pane eventKey="bestSeller">
               <div className="row">
                 <ProductGrid
                   category={category}
                   type="bestSeller"
-                  limit={4}
+                  limit={8}
                   spaceBottomClass="mb-25"
                 />
               </div>
@@ -76,7 +75,7 @@ TabProduct.propTypes = {
   bgColorClass: PropTypes.string,
   category: PropTypes.string,
   spaceBottomClass: PropTypes.string,
-  spaceTopClass: PropTypes.string
+  spaceTopClass: PropTypes.string,
 };
 
 export default TabProduct;

@@ -9,13 +9,16 @@ import SectionTitle from "../../components/section-title/SectionTitleWithText";
 import BannerEighteen from "../../wrappers/banner/BannerFourteen";
 import TestimonialOne from "../../wrappers/testimonial/TestimonialOne";
 import NewsletterTwo from "../../wrappers/newsletter/NewsletterTwo";
+import VegProduct from "../../wrappers/product/VegProduct";
+import MushroomProduct  from "../../wrappers/product/MushroomProduct";
+
 
 const HomeFashionThree = () => {
   return (
     <Fragment>
       <SEO
         titleTemplate="Homepage"
-        description="No. 1 Fruits and Vegetable Market "
+        description="No. 1 Fruits and Vegetable Market"
       />
 
       <LayoutOne
@@ -26,34 +29,60 @@ const HomeFashionThree = () => {
         <HeroSliderSixteen />
 
         <SectionTitle
-          titleText="Ahuja Mart  Fruit of the week "
+          titleText="Fresh Fruits Selection"
           positionClass="text-center"
           spaceTopClass="pt-100"
         />
 
         <TabProductFour
-          category="Fruits"
-          productTabClass="product-tab-fruits"
-        />
-        <TabProductFour
-          category="Vegetables"
-          productTabClass="product-tab-fruits"
-        />
-        <TabProductFour
-          category="vegetables"
+          category="fruits"
           productTabClass="product-tab-fruits"
         />
 
+        <SectionTitle
+          titleText="Fresh & Nutritious Mushrooms "
+          positionClass="text-center"
+          spaceTopClass="pt-100"
+        />
+
+
+      <MushroomProduct category="Mushroom"  productTabClass="product-tab-fruits"/>
+
+
+        <SectionTitle
+          titleText="Fresh & Nutrient-Rich Microgreens "
+          positionClass="text-center"
+          spaceTopClass="pt-100"
+        />
+
+        <TabProductFour
+          category="Microgreens"
+          productTabClass="product-tab-fruits"
+        />
+
+
+<BannerEighteen/>
+
         <TabProductFour category="dairy" productTabClass="product-tab-fruits" />
+
+        <SectionTitle
+          titleText="Fresh & Healthy Vegetables "
+          positionClass="text-center"
+          spaceTopClass="pt-100"
+        />
+
+        <VegProduct
+          category="Vegetables"
+          productTabClass="product-tab-fruits"
+        />
 
         <CategoryFiveGrid />
 
         <FeatureIconTwo spaceTopClass="mt-60" spaceBottomClass="pb-20" />
 
-        {/* banner Section  */}
-        <BannerEighteen />
-
+       
         {/* testimonial */}
+
         <TestimonialOne
           spaceTopClass="pt-100"
           spaceBottomClass="pb-95"
@@ -62,7 +91,6 @@ const HomeFashionThree = () => {
           bgColorClass="bg-gray-3"
         />
 
-        {/* testimonial */}
 
         {/* newsletter */}
         <NewsletterTwo
