@@ -6,12 +6,11 @@ import HeroSliderSixteen from "../../wrappers/hero-slider/HeroSliderSixteen";
 import TabProductFour from "../../wrappers/product/TabProduct";
 import CategoryFiveGrid from "../../wrappers/category/CategoryFiveGrid";
 import SectionTitle from "../../components/section-title/SectionTitleWithText";
-import BannerEighteen from "../../wrappers/banner/BannerFourteen";
+import BannerEighteen from "../../wrappers/banner/banner";
 import TestimonialOne from "../../wrappers/testimonial/TestimonialOne";
 import NewsletterTwo from "../../wrappers/newsletter/NewsletterTwo";
 import VegProduct from "../../wrappers/product/VegProduct";
-import MushroomProduct  from "../../wrappers/product/MushroomProduct";
-
+import MushroomProduct from "../../wrappers/product/MushroomProduct";
 
 const HomeFashionThree = () => {
   return (
@@ -45,9 +44,10 @@ const HomeFashionThree = () => {
           spaceTopClass="pt-100"
         />
 
-
-      <MushroomProduct category="Mushroom"  productTabClass="product-tab-fruits"/>
-
+        <MushroomProduct
+          category="Mushroom"
+          productTabClass="product-tab-fruits"
+        />
 
         <SectionTitle
           titleText="Fresh & Nutrient-Rich Microgreens "
@@ -60,8 +60,7 @@ const HomeFashionThree = () => {
           productTabClass="product-tab-fruits"
         />
 
-
-<BannerEighteen/>
+        <BannerEighteen />
 
         <TabProductFour category="dairy" productTabClass="product-tab-fruits" />
 
@@ -80,9 +79,6 @@ const HomeFashionThree = () => {
 
         <FeatureIconTwo spaceTopClass="mt-60" spaceBottomClass="pb-20" />
 
-       
-        {/* testimonial */}
-
         <TestimonialOne
           spaceTopClass="pt-100"
           spaceBottomClass="pb-95"
@@ -90,7 +86,6 @@ const HomeFashionThree = () => {
           spaceRightClass="mr-70"
           bgColorClass="bg-gray-3"
         />
-
 
         {/* newsletter */}
         <NewsletterTwo

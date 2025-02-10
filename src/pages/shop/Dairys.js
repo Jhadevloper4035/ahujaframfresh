@@ -10,7 +10,8 @@ import ShopSidebar from "../../wrappers/product/ShopSidebar";
 import ShopTopbar from "../../wrappers/product/ShopTopbar";
 import ShopProducts from "../../wrappers/product/ShopProducts";
 
-const ShopGridStandard = () => {
+const ShopDiary = () => {
+    
   const [layout, setLayout] = useState("grid three-column");
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -20,7 +21,9 @@ const ShopGridStandard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentData, setCurrentData] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
-  const { products } = useSelector((state) => state.product);
+  const products = useSelector((state) =>
+    state.product.products.filter((product) => product.category[0] === "dairy")
+  );
 
   const pageLimit = 1500;
   let { pathname } = useLocation();
@@ -113,4 +116,4 @@ const ShopGridStandard = () => {
   );
 };
 
-export default ShopGridStandard;
+export default ShopDiary;

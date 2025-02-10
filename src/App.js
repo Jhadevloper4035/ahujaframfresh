@@ -9,19 +9,32 @@ import { setUser } from "./store/slices/user-slice";
 import AdminRoute from "./routes/adminRoute.js";
 
 // Lazy load components
-const HomeFashionThree = lazy(() => import("./pages/home/Home.js"));
+const Home = lazy(() => import("./pages/home/Home.js"));
+
 const ShopGridStandard = lazy(() => import("./pages/shop/Collection.js"));
+
+const ShopFruits = lazy(() => import("./pages/shop/Fruits.js"));
+const ShopVegetables = lazy(() => import("./pages/shop/Vegetables.js"));
+const ShopDiary = lazy(() => import("./pages/shop/Dairys.js"));
+const ShopCheese = lazy(() => import("./pages/shop/Cheese.js"));
+
 const Product = lazy(() => import("./pages/shop-product/SingleProduct.js"));
+
 const About = lazy(() => import("./pages/other/About"));
 const Contact = lazy(() => import("./pages/other/Contact"));
 const MyAccount = lazy(() => import("./pages/other/MyAccount"));
+
+
 const Login = lazy(() => import("./pages/other/Login"));
 const Register = lazy(() => import("./pages/other/Register"));
 const RegisterComplete = lazy(() =>  import("./pages/other/RegisterComplete.js") );
 const ForgotPassword = lazy(() => import("./pages/other/ForgotPassword.js"));
+
+
 const Cart = lazy(() => import("./pages/other/Cart"));
 const Wishlist = lazy(() => import("./pages/other/Wishlist"));
-const Compare = lazy(() => import("./pages/other/Compare"));
+
+
 const Checkout = lazy(() => import("./pages/other/Checkout"));
 const NotFound = lazy(() => import("./pages/other/NotFound"));
 
@@ -85,11 +98,13 @@ const App = () => {
           }
         >
           <Routes>
-            <Route path="/" element={<HomeFashionThree />} />
-            <Route
-              path="/exclusive-collection"
-              element={<ShopGridStandard />}
-            />
+            <Route path="/" element={<Home />} />
+            
+            <Route path="/exclusive-collection" element={<ShopGridStandard />} />
+            <Route path="/exclusive-fruits" element={<ShopFruits />} />
+            <Route path="/exclusive-vegetables" element={<ShopVegetables />} />
+            <Route path="/exclusive-dairy" element={<ShopDiary />} />
+            <Route path="/exclusive-cheese" element={<ShopCheese />} />
 
             <Route path="/product/:id" element={<Product />} />
             <Route path="/about" element={<About />} />
@@ -101,7 +116,6 @@ const App = () => {
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/wishlist" element={<Wishlist />} />
-            <Route path="/compare" element={<Compare />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<NotFound />} />
 
